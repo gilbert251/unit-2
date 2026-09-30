@@ -1,12 +1,12 @@
-def spaces(h,y,z):
-    john = 0
-    ham = list(y)
-    yes = list(z)
-    for i in range (h):
-        k = yes[i]
-        a = ham[i]
-        if k and a == "C":
-            john = john + 1
-    print(john)
-
-spaces(5, "CC.C")
+import random
+def random():
+    while True:
+        rand = random.randint(1,100)
+        h = int(input("pick a number from 1 to 100"))
+        if h == rand:
+            print("you won")
+        elif
+            if rand > h:print ("too high")
+        else:
+            if rand < h:print ("too low")
+        
