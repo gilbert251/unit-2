@@ -1,12 +1,19 @@
-import random
-def random():
-    while True:
-        rand = random.randint(1,100)
-        h = int(input("pick a number from 1 to 100"))
-        if h == rand:
-            print("you won")
-        elif
-            if rand > h:print ("too high")
-        else:
-            if rand < h:print ("too low")
-        
+def function("find s&t"):
+    user input = input ("your word:")
+count_s = 0
+count_t = 0
+
+for letter in user input
+    if letter=='s':
+        count_s +=1
+    if letter=='t'
+        count_t +=1
+
+if count_s>count_t:
+    print ("french")
+if count_t>count_s:
+    print ("english")
+else: 
+    print "french"
+
+find s&t
