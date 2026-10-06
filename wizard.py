@@ -4,8 +4,8 @@ def wizard(owner, num, duels):
     owner=owner
     num_owners= 1
     for i in range(num):
-        if duels[i][0] == owner:
-            owner = duels[i][0]
+        if duels[i][1] == owner:
+            owner = duels[i][1]
             num_owners += 1
     print(owner, num_owners)
 
