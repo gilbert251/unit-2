@@ -1,11 +1,11 @@
 def wizard(owner, num, duels):
 
-    num_owners= 1
+    unique_owners = {owner}
     for i in range(num):
         if duels[i][1] == owner:
             owner = duels[i][0]
-            num_owners += 1
-    print(owner, num_owners)
+            unique_owners.add(owner)
+    print(f"{owner}{len (unique_owners)}")
 
 wizard("X", 4, ["AX", "BX", "XA", "DA"])
 
