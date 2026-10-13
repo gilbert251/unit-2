@@ -1,7 +1,7 @@
 def wizard(owner, num, duels):
 
-    unique_owners = {owner}
-    for i in range(num):
+    unique_owners = {owner} #stops repeat owners from counting twice
+    for i in range(num): #runs the duels
         if duels[i][1] == owner:
             owner = duels[i][0]
             unique_owners.add(owner)
