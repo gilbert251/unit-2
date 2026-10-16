@@ -20,3 +20,6 @@ shopping = True
 
 while shopping:
   print("\nAvailable Products:")
+for index, product in enumerate(products):
+    print(
+        f"{index + 1}. {product['name']} - ${product['price']} ({product['department']})"
