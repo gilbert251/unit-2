@@ -1,7 +1,7 @@
 products = [
 {
-    "name": "wood 1lb",   
-    "price": 2.99,
+    "name": "wood 1sqft",   
+    "price": 0.99,
     "department": "building",
     "description": "high quality wood",
 },
