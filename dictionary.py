@@ -11,7 +11,7 @@ products = [
     "department": "building",
     "description": "20 screws, heavy duty, works with most screwdrivers",
 
-},
+},   
 ]
 
 print("welcome to store")
