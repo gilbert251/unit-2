@@ -19,3 +19,4 @@ cart = []
 shopping = True
 
 while shopping:
+  print("\nAvailable Products:")
