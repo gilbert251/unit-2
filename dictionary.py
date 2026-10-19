@@ -49,48 +49,16 @@ while shopping:
             if not cart:
                 print("Your cart is empty.")
             else:
-                total = 0
+                sub_total = 0
                 for item in cart:
                     print(f"- {item['name']}: ${item['price']}")
-                    total += item['price']
-                print(f"Total: ${total:.2f}")
-            shopping = False
-            print("Thank you for shopping with us!")
-
-        elif choice_num == exit_option:
-            print("\nGoodbye! Come back soon.")
-            shopping = False
-            
-        else:
-            print("\nInvalid choice. Please choose a number from the menu.")
-    else:
-        print("\nInvalid input. Please enter a valid number.")
-
-    cart_option = len(products) + 1
-    exit_option = len(products) + 2
-
-    print(f"{cart_option}. View Cart & Checkout")
-    print(f"{exit_option}. Exit Store")
-
-    choice = input("\nEnter the number of your choice: ")
-
-    if choice.isdigit():
-        choice_num = int(choice)
-        
-        if 1 <= choice_num <= len(products):
-            selected_product = products[choice_num - 1]
-            cart.append(selected_product)
-            print(f"\n--> Added {selected_product['name']} to your cart!")
-
-        elif choice_num == cart_option:
-            print("\n--- Your Cart ---")
-            if not cart:
-                print("Your cart is empty.")
-            else:
-                total = 0
-                for item in cart:
-                    print(f"- {item['name']}: ${item['price']}")
-                    total += item['price']
+                    sub_total += item['price']
+                
+                tax = sub_total * 0.15
+                total = sub_total + tax
+                
+                print(f"Subtotal: ${sub_total:.2f}")
+                print(f"Tax (15%): ${tax:.2f}")
                 print(f"Total: ${total:.2f}")
             shopping = False
             print("Thank you for shopping with us!")
