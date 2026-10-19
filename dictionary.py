@@ -17,6 +17,18 @@ products = [
         "department": "tools",
         "description": "big 10 gal bucket",
     },
+    {
+        "name": "battery pack",
+        "price": 12.99,
+        "department": "electronics",
+        "description": "20 AAA batteries",
+    },
+    {
+        "name": "64GB DDR5 RAM",
+        "price": 1000.00,
+        "department": "electronics",
+        "description": "64GB DDR5 RAM for high-performance computing",
+    },
 ]
 
 print("Welcome to the store!")
@@ -68,6 +80,9 @@ while shopping:
             shopping = False
             
         else:
+            print("\nInvalid choice. Please choose a number from the menu.")
+    else:
+        print("\nInvalid input. Please enter a valid number.")
             print("\nInvalid choice. Please choose a number from the menu.")
     else:
         print("\nInvalid input. Please enter a valid number.")
