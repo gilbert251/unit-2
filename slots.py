@@ -1,6 +1,4 @@
-def gamble(quarters, play_A, play_B,play_C,play_total):
- 
- play_total=0
+def gamble(quarters, play_A=0, play_B=0, play_C=0,play_total=0):
 
  while(0<quarters):
     play_A += 1
@@ -29,5 +27,7 @@ def gamble(quarters, play_A, play_B,play_C,play_total):
        play_C = 0
 
 
-play_total = gamble(25)
+user_input = int(input("Enter starting quarters: "))
+
+play_total = gamble(user_input)
 print(f"Martha plays {play_total} times before going broke.")
