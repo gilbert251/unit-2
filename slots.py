@@ -28,6 +28,9 @@ def gamble(quarters, play_A=0, play_B=0, play_C=0,play_total=0):
 
 
 user_input = int(input("Enter starting quarters: "))
+start_A = int(input("Enter times Machine A has been played: "))
+start_B = int(input("Enter times Machine B has been played: "))
+start_C = int(input("Enter times Machine C has been played: "))
 if user_input <= 0:
     print("Please enter a positive number of quarters.")
 else:
