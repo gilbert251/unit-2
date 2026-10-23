@@ -46,7 +46,7 @@ while shopping:
 
     print(f"{cart_option}. View Cart & Checkout")
 
-    choice = input("\nEnter the number of your choice: ")
+    choice = input("\nEnter the number of your choice: ").strip()
 
     if choice.isdigit():
         choice_num = int(choice)
