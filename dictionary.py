@@ -83,6 +83,5 @@ while shopping:
             print("\nInvalid choice. Please choose a number from the menu.")
     else:
         print("\nInvalid input. Please enter a valid number.")
-            print("\nInvalid choice. Please choose a number from the menu.")
-    else:
-        print("\nInvalid input. Please enter a valid number.")
+else:
+    print("\nInvalid input. Please enter a valid number.")
