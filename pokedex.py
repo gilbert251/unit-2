@@ -6,9 +6,15 @@ try:
 except FileNotFoundError:
     moves_data = []
     print("Warning: 'moves.json' not found. Move features will be limited.")
-## create variable "data" that represents the enitre pokedex list
-data = json.load(pokedex)
-print(data[0])
+
+# 2. Open pokedex.json properly (this defines 'pokedex' so json.load works!)
+try:
+    with open("./pokedex.json", encoding="utf8") as pokedex:
+        data = json.load(pokedex)
+    print(data[0]) # Prints the first Pokémon just to test
+except FileNotFoundError:
+    data = []
+    print("Error: 'pokedex.json' not found.")
 
 # Create a function that will take the data from the JSON file and you will iterate through the list of pokemon and print each pokemons name.
 # Add a language choice feature and print the pokemons name based on the user input
@@ -76,6 +82,33 @@ def show_moves_for_pokemon(pokemon_name, data, moves):
     if not found_moves:
         print("No matching moves found in moves.json for these types.")
 
-print("welcome to pokedex! type 1 to print pokemon names.")
-if user_input==1:
-    print_pokemon_names
+
+print("Welcome to Pokedex!")
+while True:
+    print("\n--- Pokedex Menu ---")
+    print("Type 1 to print all Pokémon names")
+    print("Type 2 to find a specific Pokémon by name")
+    print("Type 3 to find Pokémon by type")
+    print("Type 4 to see all moves a Pokémon can learn")
+    print("Type 5 to exit")
+        
+    user_input = input("\nEnter your choice (1-5): ").strip()
+        
+    if user_input == "1":
+        lang = input("Enter language (default 'english'): ").strip() or "english"
+        print_pokemon_names(data, lang)
+    elif user_input == "2":
+        query = input("Enter Pokémon name to search: ").strip()
+        search_pokemon_by_name(data, query)
+    elif user_input == "3":
+        stype = input("Enter type to search (e.g., Fire, Water): ").strip()
+        results = get_pokemon_by_type(data, stype)
+        for p in results:
+            name = p['name']['english'] if isinstance(p.get('name'), dict) else p.get('name')
+            print(f"- {name}")
+    elif user_input == "4":
+            pname = input("Enter Pokémon name: ").strip()
+            show_moves_for_pokemon(pname, data, moves_data)
+    elif user_input == "5":
+        print("Goodbye!")
+        break
