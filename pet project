@@ -1,15 +1,16 @@
 class pet:    
-    def _init_(self,name,species):
+    def __init__(self,name,species):
      self.name = name
      self.species = species
      self.hunger = 50      
      self.happiness = 50   
      self.energy = 100  
-name=int.input("what do you want to name your pet?")
-species=int.input("what type of pet do you want?")
 
+name = input("what do you want to name your pet?")
+species = input("what type of pet do you want?")
 my_pet = pet(name, species)
 
 print(f"\nSuccess! You created {my_pet.name} the {my_pet.species}.")
 print(f"Stats -> Hunger: {my_pet.hunger}, Happiness: {my_pet.happiness}, Energy: {my_pet.energy}")
+
 
