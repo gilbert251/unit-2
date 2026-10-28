@@ -1,1 +1,8 @@
+class pet:    
+    def pet(self,name,species):
+     self.name = name
+     self.species = species
+     self.hunger = 50      
+     self.happiness = 50   
+     self.energy = 100  
 
