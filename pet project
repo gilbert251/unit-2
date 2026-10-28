@@ -6,11 +6,34 @@ class pet:
      self.happiness = 50   
      self.energy = 100  
 
+    def feed(self):
+       self.hunger=min(50, self.hunger + 20)
+       self.energy=min(100, self.energy + 20)
+       
+    def play(self):
+       self.happiness += 20
+       self.energy -= 20
+       self.hunger -= 20
+
+    def check_status(self):    
+            if self.hunger < 0:
+                print("your pet is hungry")
+            if self.energy < 0:
+                print("your pet is tired")
+            if self.happiness < 0:
+               print("your pet is bored")
+    
+
+
 name = input("what do you want to name your pet?")
 species = input("what type of pet do you want?")
 my_pet = pet(name, species)
 
 print(f"\nSuccess! You created {my_pet.name} the {my_pet.species}.")
 print(f"Stats -> Hunger: {my_pet.hunger}, Happiness: {my_pet.happiness}, Energy: {my_pet.energy}")
-
-
+print("what do you want to do?: play,feed,check status")
+user_input=input()
+if user_input=="play":
+    my_pet.play()
+print(f"Stats -> Hunger: {my_pet.hunger}, Happiness: {my_pet.happiness}, Energy: {my_pet.energy}")
+my_pet.check_status()
