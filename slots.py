@@ -31,7 +31,7 @@ user_input = int(input("Enter starting quarters: "))
 start_A = int(input("Enter times Machine A has been played: "))
 start_B = int(input("Enter times Machine B has been played: "))
 start_C = int(input("Enter times Machine C has been played: "))
-if user_input < 0:
+if user_input <= 0:
     print("Please enter a positive number.")
 else:
     play_total = gamble(user_input)
