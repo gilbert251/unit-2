@@ -27,7 +27,7 @@ def gamble(quarters, play_A=0, play_B=0, play_C=0,play_total=0):
        play_C = 0
 
 
-user_input = int(input("Enter starting quarters: "))
+user_input = int(input("Enter starting quarters: ")) #it will only be at above 30 quaters where play count > starting quaters
 start_A = int(input("Enter times Machine A has been played: "))
 start_B = int(input("Enter times Machine B has been played: "))
 start_C = int(input("Enter times Machine C has been played: "))
@@ -36,3 +36,4 @@ if user_input <= 0:
 else:
     play_total = gamble(user_input)
     print(f"Martha plays {play_total} times before going broke.")
+
