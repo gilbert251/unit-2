@@ -1,0 +1,87 @@
+products = [
+    {
+        "name": "wood 1sqft",   
+        "price": 0.99,
+        "department": "building",
+        "description": "high quality wood",
+    },
+    {
+        "name": "20 steel screws",
+        "price": 3.99,
+        "department": "building",
+        "description": "20 screws, heavy duty, works with most screwdrivers",
+    }, 
+    {
+        "name": "plastic bucket",
+        "price": 9.99,
+        "department": "tools",
+        "description": "big 10 gal bucket",
+    },
+    {
+        "name": "battery pack",
+        "price": 12.99,
+        "department": "electronics",
+        "description": "20 AAA batteries",
+    },
+    {
+        "name": "64GB DDR5 RAM",
+        "price": 1000.00,
+        "department": "electronics",
+        "description": "64GB DDR5 RAM for high-performance computing",
+    },
+]
+
+print("Welcome to the store!")
+cart = []
+shopping = True
+
+while shopping:
+    print("\nAvailable Products:")
+    for index, product in enumerate(products):
+        print(f"{index + 1}. {product['name']} - ${product['price']} ({product['department']})") 
+        print(f"   Description: {product['description']}") 
+
+    cart_option = len(products) + 1
+    exit_option = len(products) + 2
+
+    print(f"{cart_option}. View Cart & Checkout")
+
+    choice = input("\nEnter the number of your choice: ").strip()
+
+    if choice.isdigit():
+        choice_num = int(choice)
+        
+        if 1 <= choice_num <= len(products):
+            selected_product = products[choice_num - 1]
+            cart.append(selected_product)
+            print(f"\n--> Added {selected_product['name']} to your cart!")
+
+        elif choice_num == cart_option:
+            print("\n--- Your Cart ---")
+            if not cart:
+                print("Your cart is empty.")
+            else:
+                sub_total = 0
+                for item in cart:
+                    print(f"- {item['name']}: ${item['price']}")
+                    sub_total += item['price']
+                
+                tax = sub_total * 0.15
+                total = sub_total + tax
+                
+                print(f"Subtotal: ${sub_total:.2f}")
+                print(f"Tax (15%): ${tax:.2f}")
+                print(f"Total: ${total:.2f}")
+            shopping = False
+            print("Thank you for shopping with us!")
+
+        elif choice_num == exit_option:
+            print("\nGoodbye! Come back soon.")
+            shopping = False
+            
+        else:
+            print("\nInvalid choice. Please choose a number from the menu.")
+    else:
+        print("\nInvalid input. Please enter a valid number.")
+else:
+    print("\nInvalid input. Please enter a valid number.")
