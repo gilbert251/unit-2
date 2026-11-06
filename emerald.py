@@ -19,7 +19,7 @@ while True:
     weights = list(map(int, input("enter weights of each emerald(seperated by a space):").split()))
 
     if any(w < 1 for w in weights):
-        print("Error: Emeralds cannot be made of antimatter or have zero mass All weights must be 1 or greater.")
+        print("Error: Emeralds cannot be made of antimatter or have zero mass! All weights must be 1 or greater.")
         print("Please try again.\n")
     elif len(weights) != num:
         print(f"Error: You specified {num} emeralds but entered {len(weights)} weights.")
