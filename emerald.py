@@ -15,6 +15,15 @@ def maxemerald(num, weights):
 
     return max(sums_list) if sums_list else 0
 num = int(input("enter the number of emeralds"))
-weights = list(map(int, input("enter weights of each emerald(seperated by a space):").split()))
+while True:
+    weights = list(map(int, input("enter weights of each emerald(seperated by a space):").split()))
+
+    if any(w < 1 for w in weights):
+        print("Error: Emeralds cannot be made of antimatter or have zero mass All weights must be 1 or greater.")
+        print("Please try again.\n")
+    elif len(weights) != num:
+        print(f"Error: You specified {num} emeralds but entered {len(weights)} weights.")
+        print("Please try again.\n")
+    else: break
 
 print("Maximum even weight sum:", maxemerald(num, weights))
