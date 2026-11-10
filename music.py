@@ -15,4 +15,4 @@ try:
 
 except pygame.error as e:
     print(f"Error loading file: {e}")
-    print("Make sure you put an audio file in this folder and updated the file name!"
+    print("Make sure you put an audio file in this folder and updated the file name!")
