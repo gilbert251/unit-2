@@ -1,3 +1,4 @@
+#run "pip install pygame in your terminal."
 import pygame
 import time
 pygame.mixer.init()
