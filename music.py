@@ -3,7 +3,7 @@ import time
 pygame.mixer.init()
 
 try:
-    pygame.mixer.music.load()
+    pygame.mixer.music.load('Despacito.mp3')
     pygame.mixer.music.play()
 
     print("Listening for 10 seconds...")
