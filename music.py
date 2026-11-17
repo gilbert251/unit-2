@@ -12,7 +12,7 @@ if not mp3_files:
 
 print("Available songs:")
 for song in mp3_files:
-    print(f"- {os.path.splitext(song)[0]}")#prints song title witout errors
+    print(f"- {os.path.splitext(song)[0]}")#prints song title
 
 song_input = input("\nEnter the song name (you can copy and paste from the list): ").strip()
 
