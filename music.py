@@ -48,7 +48,7 @@ def play_music():
  else:
     print(f"Error: Could not find '{filename}' in this folder.")
 
-# --- pack() is used for the window's own widgets ---
+# pack() is used for the window's own widgets 
 title = tk.Label(
     window, text="music player",
     font=("Arial", 18, "bold"), fg="#1a365d", bg="#e8eef7",
@@ -58,7 +58,7 @@ title.pack(pady=(15, 5))
 card = tk.Frame(window, bg="white", relief="groove", bd=2)
 card.pack(padx=20, pady=10, fill="x")
 
-# --- grid() is used inside the card (a different container) ---
+#grid() is used inside the card (a different container) 
 tk.Label(card, text="songs:", bg="white").grid(row=0, column=0, sticky="e", padx=8, pady=8)
 name_entry = tk.Entry(card, width=22)
 name_entry.grid(row=0, column=1, padx=8, pady=8)
