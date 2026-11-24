@@ -26,5 +26,35 @@ def scores(anime_list):
 
     print(f"total:{high_score_amount}")
 
+# ------------------------------------------------------------
+# Q2. Accumulator
+# Calculate and print the average score of all the anime
+# in the list. Round the answer to 2 decimal places.
+# ------------------------------------------------------------
+
+
+
+
+# ------------------------------------------------------------
+# Q3. Finding the maximum
+# Print the title and episode count of the anime that has the
+# most episodes.
+# Hint: look closely at the "episodes" values. Does every
+# anime have a number?
+# ------------------------------------------------------------
+
+
+
+
+# ------------------------------------------------------------
+# Q4. Nested lists
+# Each anime has a "genres" list. Each item in that list is a
+# dictionary with a "name" key (for example, "Comedy").
+# Print the title of every anime that has the genre "Comedy".
+# ------------------------------------------------------------
+
+
+
+
 
 
