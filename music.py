@@ -1,4 +1,7 @@
 import tkinter as tk
+import os
+import time
+import pygame
 
 window = tk.Tk()
 window.title("Sign Up")
@@ -6,16 +9,12 @@ window.configure(bg="#e8eef7")
 window.geometry("320x260")
 
 def play_music():
- import os
- import time
- import pygame
-
  pygame.mixer.init()
 
  mp3_files = [f for f in os.listdir('.') if f.lower().endswith('.mp3')]#finds that file ends with .mp3
 
  if not mp3_files:
-    print("No .mp3 files found in this folder! Please add some music files first.")
+    print("No .mp3 files found in this folder, please add some music files first.")
     exit()
 
  print("Available songs:")
@@ -54,6 +53,9 @@ title = tk.Label(
     font=("Arial", 18, "bold"), fg="#1a365d", bg="#e8eef7",
 )
 title.pack(pady=(15, 5))
+
+song_list = tk.Listbox(window)
+song_list.pack(pady=5)
 
 card = tk.Frame(window, bg="white", relief="groove", bd=2)
 card.pack(padx=20, pady=10, fill="x")
